@@ -1,0 +1,18 @@
+实验6文件系统操作与磁盘管理
+df （disk filesystem）显示文件系统/磁盘的容量,使用情况
+du（disk usage）显示目录的容量，使用情况
+-h human-readble, -a all, -s summize(总的) 
+dd 从标准输入读入用户的输入到标准输出或者一个文件中；
+   dd if=/dev/stdin of=test count=1 bs=10   bs(block size)字节数量，count：bs的数量；标准输入可以省略(if=/dev/stdin)
+conv=   ；实现将从标准输入读入用户的输入进行转换；conv=ucase 转换为大写
+  使用dd命令创建虚拟镜像文件；
+dd if=/dev/zero of=virtual.img bs=1M count=256
+sudo mkfs.ext4 virtual.img对virtual.img进行格式化
+mount -o loop  -t ext4 virtual.img   /mnt
+sudo mount  查看挂载情况
+（使用linux上的一个文件以前，该文件所在的文件系统必须先进行挂载的动作，如我上面创建了一个虚拟镜像，我先对其格式化，格式化成ext4的类型，然后对其进行挂载）
+mkfs 格式化文件/磁盘 ,-o monut命令的一个参数，即option的首字母，loop 指用来把一个文件当成硬盘分区挂载到指定目录；loop设备是一种伪设备，或者仿真设备，它能使我们像访问一块设备那样访问该文件。
+umount 解除挂在 umount /mnt 解除/mnt目录下挂载的设备。
+fdisk 磁盘分区
+mkfs格式化磁盘  ，先格式化磁盘，再分区
+创建虚拟磁盘
