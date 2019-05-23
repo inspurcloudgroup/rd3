@@ -1,0 +1,12 @@
+搜索文件  ：whereis ，find，比较简单的搜索
+Locate：快而全
+Which：小而精  用来确认是否安装了某个指定的软件
+Find：最为强大。可以通过文件类型，文件名进行查找，文件属性进行查找
+Find【path】【option】【action】
+Find ~newer –newer /home/shiyanlou/code列出用户家目录下比code文件夹新的文件
+Zip –r –q –o shiynalou.zip /home/shiyanlou/Desktop
+递归压缩  安静模式， 输出文件，后面跟文件名 还可以有数字，表示压缩等级，越高体积越小，越费时间  地址只能绝对路径
+Zip –r –l –o shiyanlou.zip /home/shiyanlou/Desktop
+Windows和Linux会存在差异，-l可以消除这种问题。
+解压时，unzip –O（这里时大写O） GBK 中文压缩文件.Zip  不想解压只想查看压缩包的内容可以使用 -l
+今天老师让我修改了论文，大部分时间都在改论文
