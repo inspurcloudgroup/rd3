@@ -1,0 +1,12 @@
+1.	用tar打包时，（linux常用打包工具）创建一个tar包 tar –cf name.tar /home/shiyanlou；-c表示创建一个tar包文件，-f用于指定创建的文件名，文件名必须再f之后,所以不能是–fc。要保留文件属性和跟随连接（符号链接或软链接），前者是-p参数，后者是-h参数。
+2.	解包时，用-x ，tar –xf name.tar –c tardir –c表示已存在的目录，解压后就存在在-c之后的
+3.	–z：*.tar.gz
+4.	–J :*.tar.xz
+5.	–j:*tar.bz2
+6.	Df查看硬盘使用情况，du查看目录的容量
+7.	Dd的命令行语句与其他程序不同  选项=值的格式，而不是-选项=值
+8.	输出到文件  dd of=test bs=10 count=1/ dd if=/dev/stdin of=test bs=10 count=1
+输出到标准输出 dd if=/dev/stdin of=/dev/stdout bs=10 count=1
+输入小写输出大写：dd if=/dev/stdin of=test bs=10 count=1 conv=ucase
+9.	Help显示内建信息，--help显示外建信息   man没有两者的区分
+10.	Crontab用于设置周期性被执行的指令（暂时没有入门，不知所云）
