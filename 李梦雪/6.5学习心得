@@ -1,0 +1,23 @@
+Java 使用 File 类来直接处理文件和文件系统。File 类没有指定信息怎样从文件读取或向文件存储；它描述了文件本身的属性。使用Java的类时要注意将相应的包导入。java.io包中提供了直接操作文件的类，包括读写本地文件系统中的文件，描述本地文件系统中的文件目录等操作。
+FileInputStream 类用于打开一个输入文件，FileOutputStream 类用来打开一个输出文件。这两个类只能顺序进行读写。？？？对于目录的话，顺序是怎样的？？？
+在进行文件的读/写操作时，会产生非运行时异常 IOException，必须捕获或声明抛弃（其他的输入/输出流处理时也同样需要进行输入/输出异常处理）。
+字符信息的文件可以用filereader来读取其内容
+类 RandomAccessFile 则允许文件内容同时完成读和写操作，它直接继承 object，并且同时实现了接口 DataInput 和 DataOutput。在生成一个随机文件对象时，除了要指明文件对象和文件名之外，还需要指明访问文件的模式（读写）。
+文件的复制、移动等操作在目标文件存在时，要注意使用REPLACE_EXISTING
+读取子目录中的文件用递归读取
+一个 Java I/O 对象叫做数据流。读取数据到内存的对象叫做输入流，内存写出数据的对象叫做输出流。
+按照功能不同分为节点流和处理流，节点流是从特定的数据节点（文件、数据库、内存等）读写数据；处理流是连接在已有的流上，通过对数据的处理为程序提供更多功能。
+Java.io包中专门用于字节流处理的类是InputStream和OutputStream，专门用于字符流处理的类是以Reader和Writer为基础派生的类。
+InputStreamReader 和 OutputStreamWriter 是 java.io 包中用于处理字符流的最基本的类，用来在字节流和字符流之间作为中介：从字节输入流读入字节，并按编码规范转换为字符；往字节输出流写字符时先将字符按编码规范转换为字节。
+类 BufferedInputStream 和 BufferedOutputStream 实现了带缓冲的过滤流，它提供了缓冲机制，把任意的 I/O 流“捆绑”到缓冲流上，可以提高 I/O 流的读取效率。
+初始化时，要指定所连接的I/O流，还可以指定缓冲区的大小。
+数据流DataInput 和 DataOutput，可以处理基本数据类型
+ObjectOutputStream 和 ObjectInputStream用来传输实例化的对象。
+Java NIO是面向缓存的、非阻塞的IO，而标准IO是面向流的，阻塞的IO。NIO 读取或者写入数据都要通过 Buffer
+
+
+
+
+
+
+
